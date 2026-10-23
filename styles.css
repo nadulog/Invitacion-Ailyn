@@ -38,7 +38,7 @@ footer{text-align:center;padding:48px 20px 42px;background:linear-gradient(#fafa
 .glam-name i:nth-child(8){left:52%;top:80%;width:.08em;height:.08em;animation-delay:.45s}
 @keyframes nameTwinkle{0%,100%{opacity:0;transform:scale(.3) rotate(0)}45%{opacity:1;transform:scale(1) rotate(45deg)}70%{opacity:0;transform:scale(.4) rotate(90deg)}}
 /* Guests (filled by invitation-personalization.js from ?invite=<token>; hidden when there is no data) */
-.guests-panel:has(#nombres-invitados:empty){display:none}
+.guests-panel{display:none}.guests-panel.has-guest{display:block}
 .guests-card{position:absolute;z-index:4;left:50%;top:50%;transform:translate(-50%,-50%);width:84%;padding:clamp(28px,8vw,44px) clamp(14px,4vw,28px);text-align:center;border-radius:28px;background:rgba(255,255,255,.62);border:1px solid rgba(165,165,174,.55);box-shadow:0 18px 45px rgba(60,60,75,.14),inset 0 1px 0 rgba(255,255,255,.9);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
 .guests-card:before{content:"";position:absolute;inset:7px;border-radius:22px;border:1px solid rgba(175,175,184,.4);pointer-events:none}
 .guests-kicker{margin:0;font-size:clamp(10px,2.9vw,15px);font-weight:500;letter-spacing:.28em;color:#6e6e73}

@@ -134,3 +134,11 @@ document.querySelector('.music-link').addEventListener('click',event=>{
   musicPanel.classList.add('sending');
   setTimeout(()=>{window.open(destination,'_blank','noopener');musicPanel.classList.remove('sending')},680);
 });
+
+// Show the guests section once invitation-personalization.js fills in the names
+// (Safari does not re-evaluate :has()/:empty when text is inserted, so toggle a class instead).
+const guestNames=document.querySelector('#nombres-invitados');
+const guestsPanel=document.querySelector('.guests-panel');
+function syncGuestsPanel(){guestsPanel.classList.toggle('has-guest',guestNames.textContent.trim()!=='')}
+new MutationObserver(syncGuestsPanel).observe(guestNames,{childList:true,characterData:true,subtree:true});
+syncGuestsPanel();
